@@ -1,5 +1,6 @@
 import { ModeToggle } from "@/components/DarkMode";
 import ExpenseManager from "@/components/expense/ExpenseManager";
+import Overview from "@/components/expense/Overview";
 import RecordSales from "@/components/expense/Payment";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import localFont from "next/font/local";
@@ -33,7 +34,11 @@ export default function Home() {
           <TabsTrigger value="manageexpense">Manage expense</TabsTrigger>
           <TabsTrigger value="recordsales">Record sales</TabsTrigger>
         </TabsList>
-        <TabsContent value="overview">Over View</TabsContent>
+        <TabsContent value="overview">
+          <TabsContent value="overview">Over View</TabsContent>
+          <Overview />
+        </TabsContent>
+
         <TabsContent value="manageexpense">
           <TabsContent value="manageexpense">Managa Expense</TabsContent>
           <ExpenseManager />
